@@ -1,0 +1,111 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body and HTML styles */
+html, body {
+    height: 100%; /* Ensure body takes full viewport height */
+    display: flex; /* Enable flexbox on body and html */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Form container */
+.fom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px; /* Increase padding for spaciousness */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 1200px; /* Increased max width (double the original size) */
+    min-height: 500px; /* Ensure it has enough height */
+    justify-content: flex-start; /* Align content at the top */
+}
+
+/* Task input */
+.task {
+    padding: 20px 30px; /* Larger padding for more spacious input box */
+    margin-bottom: 30px; /* Space between input and button */
+    width: 100%; /* Make the input box stretch across the entire width */
+    font-size: 18px; /* Larger font size for better readability */
+    line-height: 1.8; /* Increased line height for spacing */
+    height: 60px; /* Increased height for the input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+/* Focus state */
+.task:focus {
+    border-color: #4caf50;
+}
+
+/* Button */
+.button {
+    padding: 20px 40px; /* Larger padding for more substantial button */
+    font-size: 18px; /* Larger font size */
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover state for the button */
+.button:hover {
+    background-color: #45a049;
+}
+
+/* Task list */
+.t_l {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px; /* Match width of the form */
+    overflow-y: auto;
+    max-height: 400px; /* Limit the height of the list */
+}
+
+/* List item styling */
+.t_l li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Checkbox styling */
+.t_l li input[type="checkbox"] {
+    margin-right: 15px;
+}
+
+/* Delete button styling */
+.t_l li .delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.t_l li .delete-btn:hover {
+    background-color: #d32f2f;
+}
